@@ -1,0 +1,103 @@
+\documentclass[oneside,a4paper,12pt]{book}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{CJK} 
+\hypersetup{
+            unicode=true,
+            CJKbookmarks=true,
+            bookmarksnumbered=true,
+            bookmarksopen=true,
+            bookmarksopenlevel=1,
+            breaklinks=true,
+            colorlinks=false,
+            plainpages=false,
+            pdfpagelabels,
+            pdfborder=0 0 0}
+\linespread{1.36}
+\parindent=0pt
+\begin{document}
+\frontmatter
+\begin{CJK*}{UTF8}{gbsn}
+  % 中文段落首行缩进2个汉字
+  \CJKindent
+  \title{王小波作品}
+  \author{王小波}
+  \date{1952.5.13 - 1997.4.11}
+  \maketitle
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %convert bookmarks from GBK to unicode
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %\AtBeginDvi{\special{pdf:tounicode GBK-EUC-UCS2}}   % GBK -> Unicode
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \newcommand\CJKprechaptername{第}
+  \newcommand\CJKchaptername{号作品}
+  \renewcommand{\chaptermark}[1]{\markboth{\CJKprechaptername~\thechapter~\CJKchaptername\  #1}{}}
+  \renewcommand\chaptername{\CJKprechaptername~\thechapter~\CJKchaptername}
+  \renewcommand{\contentsname}{目\hspace{1em}录} 
+
+  \include{preface}
+  \tableofcontents
+  \setcounter{secnumdepth}{1}
+  %% novel
+  \part{小说}
+  %% 黄金时代
+  \mainmatter
+  \include{huangjinshidai}          %%Last updated: 2008|09|17  20:32:52 by Van Tae
+  \include{gemingshiqideaiqing}     %%Last updated: 2008|09|17  20:40:41 by Van Tae
+  \include{wodeyinyangliangjie}
+  \include{sanshierli}
+  \include{nanguadoufu}
+  %% 黑铁时代
+  \include{2010}
+  \include{zhanfu}
+  \include{lvmaoshuiguai}
+  \include{hongfuyeben_10}
+  \include{mao}
+  \include{daxuesinianji}
+  \include{heitieshidai}
+  \include{yingtaohong}
+  \include{heitiegongyu}
+  %% 青铜时代
+  \include{wanshousi}
+  \include{xunzhaowushuang}
+  %% 白银时代
+  \include{baiyinshidai} %%Last updated: 2008|09|21  00:44:04 by Van Tae
+  \include{weilaishijie}
+  \include{2015}
+  %% 地久天长
+  %%% 唐人故事
+  \include{yexingji}
+  \include{jiujiuqingren}
+  \include{hongxiandaohe}
+  \include{lixinjiejiayihaoyukunlunnu}
+  %%%
+  \include{sishuirouqing}
+  \include{dijiutianchang}
+  %% 东宫 西宫
+  \include{donggongxigong}
+  %%%
+  \include{bianxingji}
+  \include{gexian}
+  \include{mangmangheiyemanyou}
+  \include{sishuiliunian}
+  %% essay
+  \part{随笔}
+  \include{essay}
+  %% epistle
+  \part{书信}
+  \include{zhiyinhe}
+%%  \part{其他}
+%%  \include{other}           %%Last updated: 2008|09|17  20:44:47 by Van Tae
+  \backmatter
+\include{epilogue}        %%Last updated: 2008|09|17  20:45:00 by Van Tae
+\end{CJK*}
+\end{document}
+
+%% Last updated on 22 November 2008 19:39:36 by Pluto
+%% 前后的顺序完全没有根据也 先收集文字吧 另外字体实在不美观也。
+%% 睡觉去也。
+%% svn 常用命令 
+%% svn add 添加新文件
+%% svn ci  提交更新
+
